@@ -29,5 +29,6 @@ async function generateQRCodes() {
     } catch (error) {
         console.error("Error:", error);
         alert("An error occurred while generating QR codes.");
+        alert(":/n ",error);
     }
 }
