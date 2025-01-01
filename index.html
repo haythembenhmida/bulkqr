@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk QR Code Generator</title>
+    <link rel="manifest" href="./manifest.json">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            color: #333;
+        }
+
+        .header {
+            background: #2575fc;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .form-section {
+            padding: 20px;
+        }
+
+        .form-section textarea {
+            width: 100%;
+            height: 120px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            resize: none;
+        }
+
+        .form-section button {
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #2575fc;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .form-section button:hover {
+            background: #6a11cb;
+        }
+
+        .qr-display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 15px;
+        }
+
+        .qr-display img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9em;
+            background: #f4f4f4;
+            color: #555;
+        }
+
+        footer a {
+            color: #2575fc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bulk QR Code Generator</h1>
+            <p>Create multiple QR codes quickly and easily.</p>
+        </div>
+        <div class="form-section">
+            <textarea id="names" placeholder="Enter names, one per line"></textarea>
+            <button onclick="generateQRCodes()">Generate QR Codes</button>
+        </div>
+        <div id="qr-display" class="qr-display"></div>
+    </div>
+    <footer>
+        Made with 💖 by <a href="#">Your Company</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
